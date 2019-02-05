@@ -32,4 +32,18 @@ while num != 1:
         f += 1
 
 print(fact)
-##
+
+#euler q.4
+
+def is_palindrome(num):
+   z = str(num)
+   l = len(z)
+
+   if l == 2:
+       return(z[0] == z[1])
+   if l == 3:
+       return(z[0] == z[2])
+   if l % 2 == 0:
+       return(z[0 : int(l/2)] == z[:int(l/2) - 1: -1])
+   else:
+       return(z[0 : int((l - 1)/2)] == z[: int((l - 1)/2)])
